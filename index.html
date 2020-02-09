@@ -1,182 +1,278 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE HTML SYSTEM>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>readme.md</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//google-analytics.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//ssl.google-analytics.com">
+
+  <style>
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-track {
+      display: none;
+    }
+  </style>
+
+  <script>
+    if (top !== self) top.location.replace(self.location.href);
+  </script>
+
+  <!-- Bootstrap Styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/app.min.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <title>StagPHP - Modern Web Framework</title>
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png">
+
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-128.png" sizes="128x128" />
+
+  <meta name="application-name" content="CYZER" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="assets/favicon/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="assets/favicon/mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="assets/favicon/mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="assets/favicon/mstile-310x310.png">
 </head>
 
-<body class="stackedit">
-  <div class="stackedit__html"><h1 id="stagphp---mvc-driven-php-framework.">StagPHP - MVC Driven PHP Framework.</h1>
-<p>StagPHP is a minimalistic build open source PHP Framework for all types of modern application. It follows the MVC (Model View Controller) architecture.</p>
-<h2 id="preamble">Preamble</h2>
-<p>StagPHP is create all types of websites to super powerful web applications. It has minimal inbuilt functionality. Every functionality is carefully selected to just provide a bare bone-structure for your project. Thus it is minimalistic. Minimalistic framework structure low server resource and provide better performance to end-user.<br>
-StagPHP needs no extra juice! It is compatible with almost all web server as it requires Apache and PHP to run. Optionally mySQL (or any other database). It is lightweight, so any LAMP server can run StagPHP.<br>
-StagPHP functionality can be extended by using StagONS. It is just like addons/plugins AKA (also known as) external controllers. You can install official, self-created or 3rd party StagONS for your project. It makes your application modular. It is full featured framework and supports export, import, editing and update functionality directly from SU (Super User) Panel.<br>
-StagPHP is secured by default. But you can follow the steps listed below for better security</p>
-<ul>
-<li>Enable Automatic Updates</li>
-<li>Use VPS (Virtual Private Server) for hosting</li>
-<li>Use strong password for SU Account</li>
-<li>Do Not Install 3rd Party (UnTrusted) StagONS</li>
-</ul>
-<h2 id="directory-structure">Directory Structure</h2>
-<p>StagPHP has following directory structure (Updated on V 1.0.2). We are creating documentation for more insight.</p>
-<ul>
-<li>app - Application Directory</li>
-<li>cache - Auto Generated Cache Directory</li>
-<li>container - Storage Container</li>
-<li>includes - Includes Core Files
-<ul>
-<li>admin - Super User / Adminstration Files
-<ul>
-<li>assets</li>
-<li>controllers</li>
-<li>views</li>
-</ul>
-</li>
-<li>componets
-<ul>
-<li>boot - Boot Up and Shutdown Function</li>
-<li>core</li>
-<li>helpers</li>
-</ul>
-</li>
-<li>lib - Core Controllers and Library</li>
-</ul>
-</li>
-<li>index.php</li>
-</ul>
-<h2 id="naming-convention">Naming Convention</h2>
-<p>Typical, but worth mentioning</p>
+<body class="sticky-nav transparent-nav">
 
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Naming Convention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>File Names</td>
-<td>Lower cased separated with dash and group separated with dot (<strong>stag-start.group.php</strong>)</td>
-</tr>
-<tr>
-<td>Variables</td>
-<td>Lower cased separated with underscored (<strong>$file_system</strong>)</td>
-</tr>
-<tr>
-<td>Global variables</td>
-<td>All upper case and underscored (<strong>$GLOBAL_VARIABLE</strong>)</td>
-</tr>
-<tr>
-<td>Instances variables / Objects</td>
-<td>Suffix <strong>_obj</strong> (<strong>$file_operator_obj</strong>)</td>
-</tr>
-<tr>
-<td>Reserved variables</td>
-<td>Prefix <strong>stag_</strong> (<strong>$stag_file_op_obj</strong>)</td>
-</tr>
-<tr>
-<td>Array</td>
-<td>Lower cased separated with underscored (<strong>array(‘the_key’=&gt;‘the_value’)</strong>)</td>
-</tr>
-<tr>
-<td>Constants</td>
-<td>All upper case and underscored (<strong>THE_CONSTANT_VAR</strong>)</td>
-</tr>
-<tr>
-<td>Classes</td>
-<td>Camel case / Pascal case (Note that, when using camel case, the initial character is upper case) (<strong>FileOperator</strong>)</td>
-</tr>
-<tr>
-<td>Methods</td>
-<td>Lower cased separated with underscored (<strong>the_function()</strong>)</td>
-</tr>
-</tbody>
-</table><h2 id="reserved-variables-and-functions">Reserved Variables and Functions</h2>
-<p>Must be considered while developing StagPHP application, to avoid conflicts.</p>
+  <!-- Site header -->
+  <header class="site-header">
 
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>LIST</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Global Reserved Variable</td>
-<td>ABSPATH, STAG_VERSION, STAG_INDEX, CURRENT_DOMAIN, REQUEST_URI, EXECUTION_START, APP_VIEW_LOADED, APP_404, STAG_APP_DIR, STAG_CACHE_DIR, STAG_INCLUDES, STAG_ADMIN_DIR, STAG_COMPONENTS_DIR, STAG_LIB_DIR, STAG_ADMIN_CONTROLLERS_DIR, STAG_ADMIN_VIEWS_DIR</td>
-</tr>
-<tr>
-<td>Reserved Function Names</td>
-<td>stag_startup, stag_url_create, stag_url_rewrite, stag_route_junction, stag_add_route, stag_add_redirect, get_home_url, get_current_url, get_current_slug, get_su_panel_url, get_assets_dir_uri, stag_action</td>
-</tr>
-</tbody>
-</table><h2 id="update-log">Update Log</h2>
-<h3 id="v-1.0.1---beta-build-10-01-2020">V 1.0.1 - Beta Build (10-01-2020)</h3>
-<ol>
-<li>Complete code auditing, arrangement and cleanup</li>
-<li>Installation modified</li>
-<li>DB controller updated</li>
-<li>noDB support added</li>
-<li>Bootup enhanced, optimized and secured</li>
-<li>Update functionality modified</li>
-<li>Stag SMTP Integration - Work on Progress</li>
-</ol>
-<h3 id="v-1.0.0---alpha-build-7">V 1.0.0 - Alpha Build 7</h3>
-<ol>
-<li>Added Static Objects - Phrase Object, CURL Object</li>
-<li>Update Logic Modified - This release is only for testing</li>
-<li>SU Panel UI Reset - Bootstrap Reset</li>
-</ol>
-<h3 id="v-1.0.0---alpha-build-6">V 1.0.0 - Alpha Build 6</h3>
-<ol>
-<li>Architecture Modified</li>
-<li>Code Revised</li>
-<li>Core mySQL DB Controller Modified and Updated</li>
-<li>Stag Core Update Functionality Added</li>
-</ol>
-<h3 id="v-1.0.0---alpha-build-5">V 1.0.0 - Alpha Build 5</h3>
-<ol>
-<li>Code Editor Added</li>
-<li>Super User Management Updated</li>
-<li>Stag JDB Updated</li>
-</ol>
-<h3 id="v-1.0.0---alpha-build-4">V 1.0.0 - Alpha Build 4</h3>
-<ol>
-<li>Complete Code Revised</li>
-<li>Super User Management Updated</li>
-<li>Stag JDB Updated</li>
-</ol>
-<h3 id="v-1.0.0---alpha-build-3">V 1.0.0 - Alpha Build 3</h3>
-<ol>
-<li>Super User Session Management Updated</li>
-<li>Remember Me Fixed</li>
-<li>Unique Session Fixed</li>
-</ol>
-<h3 id="v-1.0.0---alpha-build-2">V 1.0.0 - Alpha Build 2</h3>
-<ol>
-<li>Ace Editor Integrated</li>
-<li>Code Editor Page Created</li>
-<li>Page ID Implemented</li>
-<li>Code Formatted</li>
-<li>Code optimized</li>
-</ol>
-<h3 id="v-1.0.0---alpha-build-1">V 1.0.0 - Alpha Build 1</h3>
-<ol>
-<li>Multiple Functions Created</li>
-<li>Readme Added</li>
-</ol>
-<h3 id="v-1.0.0">V 1.0.0</h3>
-<ol>
-<li>Genessis Build</li>
-</ol>
-</div>
+    <!-- Attach Navigation -->
+
+    <!-- Logo & Navigation -->
+    <nav class="site-navigation">
+      <div class="container">
+        <div class="logo">
+          <a class="logo-default" href="index.html">
+            <img src="assets/media/logo/logo-dark.png" alt="logo" style="padding: 10px 0;">
+          </a>
+          <a class="logo-transparent" href="index.html">
+            <img src="assets/media/logo/logo-light.png" alt="logo" style="padding: 20px 0;">
+          </a>
+        </div>
+
+        <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+
+        <ul class="nav-menu">
+          <li>
+            <a class="active" href="/index.html">StagPHP</a>
+          </li>
+          <li>
+            <a href="/documentations.html">Documentation</a>
+            <ul>
+              <li><a href="/docs/getting-started.html">Getting Started</a></li>
+              <li><a href="/docs/advance-usage.html">Advance Usage</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/development-guide.html">Development</a>
+            <ul>
+              <li><a href="/dev/core-architecture.html">Core Architecture</a></li>
+              <li><a href="/dev/core-libraries.html">Core Libraries</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">StagONS</a>
+          </li>
+          <li>
+            <a class="download" href="https://github.com/StagPHP/framework/archive/master.zip" download><i class="fas fa-download"></i> Download</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END Logo & Navigation -->
+
+    <!-- Attach Hero -->
+
+
+    <!-- Header image -->
+
+    <!-- Header image -->
+    <div class="header-image" style="background-image: url(assets/media/home-bg.jpg); background-position: center; background-size: cover; padding: 260px 0 50px;">
+      <div class="container">
+        <header class="section-header text-left">
+          <h2>The <strong>StagPHP</strong></h2>
+          <p style="max-width: 700px;">It is Open Source, Lightweight, Extensible, High Performance, and Secure PHP Framework for Modern Web Applications. It follows MVC Architecture.</p>
+          <p style="margin-top: 50px;">
+            <a class="btn btn-white btn-round" href="#sec-features" style="margin-right:12px;">Learn More</a>
+          </p>
+        </header>
+      </div>
+    </div>
+    <!-- END Header image -->
+
+  </header>
+  <!-- END Site header -->
+
+
+  <!-- Main container -->
+  <main>
+
+    <!-- Main Body -->
+
+    <!-- Section - Features -->
+    <section id="sec-features" class="no-border-bottom">
+      <div class="container">
+        <header class="section-header">
+          <span>INTRODUCTION TO</span>
+          <h2>StagPHP <strong>Framework</strong></h2>
+        </header>
+
+        <div class="row">
+          <div class="col-md-6 mvc-block">
+            <div>
+              <img src="assets/media/mvc-block-diag.png" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p style="font-weight: normal;">Cyzer is the very lightweight PHP framework. It is compatible with almost all web server as it required PHP,
+              my SQL and Apache to run. A developer can choose the type of controllers for their application these
+              controllers are the main engine fo the application. Cyzer comes with multiple controllers other than default
+              controllers and modules additional controllers can also be added as an add-on or plugin.</p>
+            <ul class="step-text">
+              <li>
+                <h5>Fully Open Source</h5>
+                <p>Every piece of code written to build cyzer resides on Github public repositories. Fork Cyzer on Github.
+                </p>
+              </li>
+
+              <li>
+                <h5>Controlled Development Environment</h5>
+                <p>Cyzer do not load any controllers by default. You can select the controllers and include it in your
+                  application as per your requirement.</p>
+              </li>
+
+              <li>
+                <h5>Extensible and Secure</h5>
+                <p>You can extend the functionality of Cyzer by using controller modules as a addon. Installing trusted
+                  controller modules will keeps your Cyzer application safe and secure with regular updates.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Section - Features -->
+
+
+    <!-- Section - Features -->
+    <section id="sec-features" class="no-border-bottom bg-gray-lighter">
+      <div class="container">
+        <header class="section-header" style="margin-bottom: 100px;">
+          <h2>Cyzer Documentations</h2>
+          <p>Are you new to <strong>StagPHP</strong>! Don't worry, we got you covered.</p>
+        </header>
+        <ul class="list-view">
+          <li>
+            <h5><a href="#">Get Going Fast</a></h5>
+            <p class="meta-data">August 19, 2015 | 3 mins | Beginner</p>
+            <p>A quick-start guide to all the basics you need to get up and running now. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+          </li>
+
+          <li>
+            <h5><a href="#">Get a Homepage</a></h5>
+            <p class="meta-data">August 26, 2015 | 5 mins | Beginner</p>
+            <p>Learn how to turn that blog into a static website for your business or your organization. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+          </li>
+
+          <li>
+            <h5><a href="#">Get Lingo</a></h5>
+            <p class="meta-data">September 05, 2015 | 12 mins | Intermediate</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis bibendum ligula. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+          </li>
+        </ul>
+
+        <div style="width: 200px; margin: 70px auto 0">
+          <a class="btn btn-block" href="docs.html">Read Docs</a>
+        </div>
+
+      </div>
+    </section>
+    <!-- END Section - Features -->
+
+    <!-- Section - Purchase -->
+    <section id="sec-purchase" style="background: url('assets/media/bg-light.png');" class="no-border-bottom bg-repeat text-center">
+      <div class="container">
+        <h2 style="font-weight:200">Patreon Sponsors</h2>
+        <br><br>
+        <img src="assets/media/sponsors.png" />
+      </div>
+    </section>
+    <!-- END Section - Purchase -->
+
+  </main>
+  <!-- END Main container -->
+
+  <!-- Body Footer -->
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <ul class="footer-links">
+            <li><a href="#">Support Us</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="footer-socials">
+              <li><a class="facebook" target="_blank" href="https://github.com/StagPHP/framework"><i class="fab fa-github" style="margin-right: 10px;"></i> StagPHP</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyrights &copy; 2019 All Rights Reserved by <a href="#">StagPHP</a>.</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <p class="back-to-top"><a id="scroll-up" href="#">back to top</a></p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- END Site footer -->
+
+  <!-- Footer -->
+
+  <!-- Scripts -->
+  <script src="assets/js/app.min.js"></script>
+  <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js"></script> -->
+
 </body>
 
 </html>

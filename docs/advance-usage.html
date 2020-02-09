@@ -1,0 +1,192 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//google-analytics.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//ssl.google-analytics.com">
+
+    <style>
+        ::-webkit-scrollbar,
+        ::-webkit-scrollbar-track {
+            display: none;
+        }
+    </style>
+
+    <script>
+        if (top !== self) top.location.replace(self.location.href);
+    </script>
+
+    <!-- Bootstrap Styles -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/app.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+    <title>StagPHP - Modern Web Framework</title>
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/favicon/apple-touch-icon-152x152.png">
+
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-128.png" sizes="128x128" />
+
+    <meta name="application-name" content="CYZER" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../assets/favicon/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="../assets/favicon/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="../assets/favicon/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="../assets/favicon/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="../assets/favicon/mstile-310x310.png">
+</head>
+
+<body class="sticky-nav transparent-nav">
+
+    <!-- Site header -->
+    <header class="site-header">
+
+        <!-- Logo & Navigation -->
+        <nav class="site-navigation">
+            <div class="container">
+                <div class="logo">
+                    <a class="logo-default" href="index.html">
+                        <img src="../assets/media/logo/logo-dark.png" alt="logo" style="padding: 10px 0;">
+                    </a>
+                    <a class="logo-transparent" href="index.html">
+                        <img src="../assets/media/logo/logo-light.png" alt="logo" style="padding: 20px 0;">
+                    </a>
+                </div>
+
+                <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+
+                <ul class="nav-menu">
+                    <li>
+                        <a href="/index.html">StagPHP</a>
+                    </li>
+                    <li>
+                        <a class="active" href="/documentations.html">Documentation</a>
+                        <ul>
+                            <li><a href="/docs/getting-started.html">Getting Started</a></li>
+                            <li><a class="active" href="/docs/advance-usage.html">Advance Usage</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/development-guide.html">Development</a>
+                        <ul>
+                            <li><a href="/dev/core-architecture.html">Core Architecture</a></li>
+                            <li><a href="/dev/core-libraries.html">Core Libraries</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">StagONS</a>
+                    </li>
+                    <li>
+                        <a class="download" href="https://github.com/StagPHP/framework/archive/master.zip" download><i class="fas fa-download"></i> Download</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- END Logo & Navigation -->
+
+        <!-- Header image -->
+        <div class="header-image no-padding" style="background-image: url(../assets/media/doc-bg.jpg); background-position: center top; background-size: cover;">
+            <div class="container">
+                <div style="height: 200px;"></div>
+                <div style="padding: 40px 0 40px;">
+                    <h1><strong>StagPHP</strong> Documentation</h1>
+                </div>
+            </div>
+        </div>
+        <!-- END Header image -->
+
+    </header>
+    <!-- END Site header -->
+
+
+    <!-- Main container -->
+    <main>
+
+        <!-- Section - Features -->
+        <section id="sec-features" class="no-border-bottom bg-gray-lighter">
+            <div class="container">
+
+                <header class="section-header text-left">
+                    <h2>Advance Usage</h2>
+                </header>
+
+                <ul class="list-view">
+
+                </ul>
+
+            </div>
+        </section>
+        <!-- END Section - Features -->
+
+    </main>
+    <!-- END Main container -->
+
+    <!-- Body Footer -->
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <ul class="footer-links">
+                        <li><a href="#">Support Us</a></li>
+                        <li><a href="#">Credits</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="footer-socials">
+                        <li><a class="facebook" target="_blank" href="https://github.com/StagPHP/framework"><i class="fab fa-github" style="margin-right: 10px;"></i> StagPHP</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyrights &copy; 2019 All Rights Reserved by <a href="#">Cyzer</a>.</p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <p class="back-to-top"><a id="scroll-up" href="#">back to top</a></p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- END Site footer -->
+
+    <!-- Footer -->
+
+    <!-- Scripts -->
+    <script src="../assets/js/app.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../assets/js/main.js"></script> -->
+
+</body>
+
+</html>

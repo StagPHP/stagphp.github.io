@@ -1,0 +1,79 @@
+.code-preview .btn {
+  margin-bottom: 6px;
+  margin-right: 2px
+}
+
+
+.mvc-block {
+  display: table;
+}
+
+@media only screen and (max-width: 992px){
+  .mvc-block {
+    width: 100%;
+  }
+}
+
+.mvc-block >div {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.mvc-block >div >img {
+  max-width: 450px;
+}
+
+.sticky-nav.body-scrolled .site-navigation .nav-menu>li>a.download {
+  line-height: 40px;
+}
+
+.site-navigation .nav-menu a.download {
+  background-color: #444;
+  line-height: 40px;
+  border-radius: 40px;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.site-navigation .nav-menu a.download  .fas{
+  font-size: 22px;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+.site-navigation .navbar-toggle {
+  padding: 0 10px;
+}
+
+.site-navigation .navbar-toggle .fa {
+  display: inline-block;
+  line-height: 60px;
+}
+
+.features{
+  text-align: left;
+  padding: 10px;
+}
+
+.features li {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1), -2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-footer .footer-socials .fab {
+  line-height: inherit;
+}
+
+.site-footer .footer-socials a {
+  width: auto !important;
+  padding: 0 10px;
+  text-decoration: none;
+}
