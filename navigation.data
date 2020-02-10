@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="logo">
+        <a class="logo-default" href="index.html">
+            <img src="/assets/media/logo/logo-dark.png" alt="logo" style="padding: 10px 0;">
+        </a>
+        <a class="logo-transparent" href="/index.html">
+            <img src="/assets/media/logo/logo-light.png" alt="logo" style="padding: 10px 0;">
+        </a>
+    </div>
+
+    <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+
+    <ul class="nav-menu">
+        <li>
+            <a id="home" href="/index.html">StagPHP</a>
+        </li>
+        <li>
+            <a id="docs" href="/documentations.html">Documentation</a>
+        </li>
+        <li>
+            <a href="/development-guide.html">Development</a>
+        </li>
+        <li>
+            <a href="/stagons.html">StagONS</a>
+        </li>
+        <li>
+            <a class="download" href="https://github.com/StagPHP/framework/archive/master.zip" download><i class="fas fa-download"></i> Download</a>
+        </li>
+    </ul>
+</div>

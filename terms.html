@@ -57,9 +57,31 @@
     <meta name="msapplication-square150x150logo" content="assets/favicon/mstile-150x150.png">
     <meta name="msapplication-wide310x150logo" content="assets/favicon/mstile-310x150.png">
     <meta name="msapplication-square310x310logo" content="assets/favicon/mstile-310x310.png">
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N6KTSKL');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body class="sticky-nav transparent-nav">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6KTSKL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Site header -->
     <header class="site-header">
@@ -67,54 +89,13 @@
         <!-- Attach Navigation -->
 
         <!-- Logo & Navigation -->
-        <nav class="site-navigation">
-            <div class="container">
-                <div class="logo">
-                    <a class="logo-default" href="index.html">
-                        <img src="assets/media/logo/logo-dark.png" alt="logo" style="padding: 10px 0;">
-                    </a>
-                    <a class="logo-transparent" href="/index.html">
-                        <img src="assets/media/logo/logo-light.png" alt="logo" style="padding: 20px 0;">
-                    </a>
-                </div>
-
-                <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
-
-                <ul class="nav-menu">
-                    <li>
-                        <a href="/index.html">StagPHP</a>
-                    </li>
-                    <li>
-                        <a href="/documentations.html">Documentation</a>
-                        <ul>
-                            <li><a href="/docs/getting-started.html">Getting Started</a></li>
-                            <li><a href="/docs/advance-usage.html">Advance Usage</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/development-guide.html">Development</a>
-                        <ul>
-                            <li><a href="/dev/core-architecture.html">Core Architecture</a></li>
-                            <li><a href="/dev/core-libraries.html">Core Libraries</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/stagons.html">StagONS</a>
-                    </li>
-                    <li>
-                        <a class="download" href="https://github.com/StagPHP/framework/archive/master.zip" download><i class="fas fa-download"></i> Download</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- END Logo & Navigation -->
+        <nav class="site-navigation" data-load-template="navigation"></nav>
 
         <!-- Header image -->
-        <div class="header-image" style="background-image: url(assets/media/home-bg.jpg); background-position: center; background-size: cover; padding: 260px 0 50px;">
+        <div class="header-image" style="background: url(assets/media/home-bg.jpg); background-position: center; background-size: cover; padding: 260px 0 50px;">
             <div class="container">
             </div>
         </div>
-        <!-- END Header image -->
 
     </header>
     <!-- END Site header -->
@@ -171,48 +152,15 @@
     </main>
     <!-- END Main container -->
 
-    <!-- Body Footer -->
     <!-- Site footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <ul class="footer-links">
-                        <li><a href="https://github.com/StagPHP/framework/blob/master/LICENSE" target="_blank">License</a></li>
-                        <li><a href="/terms.html">Terms</a></li>
-                        <li><a href="/privacy.html">Privacy</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="footer-socials">
-                        <li><a class="facebook" target="_blank" href="https://github.com/StagPHP/StagPHP-Framework"><i class="fab fa-github" style="margin-right: 10px;"></i> StagPHP</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyrights &copy; 2019 All Rights Reserved by <a href="#">StagPHP</a>.</p>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <p class="back-to-top"><a id="scroll-up" href="#">back to top</a></p>
-                </div>
-            </div>
-
-        </div>
-    </footer>
+    <footer class="site-footer" data-load-template="footer"></footer>
     <!-- END Site footer -->
 
-    <!-- Footer -->
-
     <!-- Scripts -->
-    <script src="assets/js/app.min.js"></script>
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="assets/js/main.js"></script> -->
+    <script src="/assets/js/app.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="/assets/js/main.min.js"></script>
+    <!-- END Scripts -->
 
 </body>
 
