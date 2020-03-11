@@ -1,166 +1,260 @@
-<!DOCTYPE HTML SYSTEM>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//google-analytics.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//ssl.google-analytics.com">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no">
 
-    <style>
-        ::-webkit-scrollbar,
-        ::-webkit-scrollbar-track {
-            display: none;
-        }
-    </style>
+  <!-- Primary Meta Tags -->
+  <title>Getting Started Guide for StagPHP</title>
+  <meta name="title" content="Getting Started Guide for StagPHP">
+  <meta name="description" content="Get started with StagPHP. Go through these topics to learn the StagPHP installation and server setup. Learn to create a basic application and more.">
 
-    <script>
-        if (top !== self) top.location.replace(self.location.href);
-    </script>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stagphp.io/docs/getting-started.html">
+  <meta property="og:title" content="Getting Started Guide for StagPHP">
+  <meta property="og:description" content="Get started with StagPHP. Go through these topics to learn the StagPHP installation and server setup. Learn to create a basic application and more.">
+  <meta property="og:image" content="https://stagphp.io/assets/media/social.jpg">
 
-    <!-- Bootstrap Styles -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/app.min.css">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://stagphp.io/docs/getting-started.html">
+  <meta property="twitter:title" content="Getting Started Guide for StagPHP">
+  <meta property="twitter:description" content="Get started with StagPHP. Go through these topics to learn the StagPHP installation and server setup. Learn to create a basic application and more.">
+  <meta property="twitter:image" content="https://stagphp.io/assets/media/social.jpg">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <script>
+    if (top !== self) top.location.replace(self.location.href);
+  </script>
 
-    <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+  <!-- Bootstrap Styles -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="../assets/css/custom.css">
+  <!-- Theme Styles -->
+  <link rel="stylesheet" href="/assets/css/theme.min.css">
 
-    <title>StagPHP - Modern Web Framework</title>
+  <!-- Theme Color Styles -->
+  <link rel="stylesheet" href="/assets/css/light.min.css">
 
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/favicon/apple-touch-icon-152x152.png">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" id="google-fonts" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700" type="text/css" media="none" onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" id="google-fonts" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700" type="text/css" media="all" />
+  </noscript>
 
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-128.png" sizes="128x128" />
+  <!-- StagPHP Font Icons -->
+  <link rel="stylesheet" id="stag-icons" href="/assets/stag-icons/style.css" type="text/css" media="none" onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" id="stag-icons" href="/assets/stag-icons/style.css" type="text/css" media="all" />
+  </noscript>
 
-    <meta name="application-name" content="StagPHP" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="../assets/favicon/mstile-144x144.png">
-    <meta name="msapplication-square70x70logo" content="../assets/favicon/mstile-70x70.png">
-    <meta name="msapplication-square150x150logo" content="../assets/favicon/mstile-150x150.png">
-    <meta name="msapplication-wide310x150logo" content="../assets/favicon/mstile-310x150.png">
-    <meta name="msapplication-square310x310logo" content="../assets/favicon/mstile-310x310.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-N6KTSKL');
-    </script>
-    <!-- End Google Tag Manager -->
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-128.png" sizes="128x128" />
+
+  <meta name="application-name" content="StagPHP" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="/assets/favicon/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/assets/favicon/mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/assets/favicon/mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/assets/favicon/mstile-310x310.png">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N6KTSKL');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 
-<body class="sticky-nav transparent-nav">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6KTSKL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<body class="light-theme notification-active">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6KTSKL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Site header -->
-    <header class="site-header">
+  <!-- Notification -->
+  <div class="notification" style="display: none;" data-load-template="notify"></div>
 
-        <!-- Logo & Navigation -->
-        <nav class="site-navigation" data-load-template="navigation"></nav>
-
-        <!-- Header image -->
-        <div class="header-image no-padding" style="background: url(../assets/media/doc-bg.jpg); background-position: center top; background-size: cover;">
-            <div class="container">
-                <div style="height: 200px;"></div>
-                <div style="padding: 40px 0 40px;">
-                    <h1><strong>StagPHP</strong> Documentation</h1>
-                </div>
+  <!-- Header -->
+  <header>
+    <!-- Top Navigation Bar -->
+    <div id="transparent-bar" class="top-nav-bar">
+      <!-- Top Bar -->
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Logo -->
+          <div class="col-lg-2 col-6">
+            <div class="branding text-lg-left float-lg-left float-right">
+              <a class="logo dark-version" href="/index.html">
+                <img src="/assets/media/logo/stagphp-logo-dark.png" alt="logo">
+              </a>
+              <a class="logo light-version" href="/index.html">
+                <img src="/assets/media/logo/stagphp-logo-light.png" alt="logo">
+              </a>
             </div>
+          </div>
+
+          <!-- Side menu drawer -->
+          <div class="col-6 d-lg-none d-block order-first">
+            <div class="drawer menu-open float-left pr-2">
+              <span class="stag-icon stag-icon-drawer mr-2"></span>
+              <span><strong>MENU</strong></span>
+            </div>
+          </div>
+
+          <!-- menu -->
+          <div class="col-lg-10 col-12 d-lg-block d-none">
+            <ul class="top-navigation">
+              <li>
+                <a class="disabled">
+                  <span class="stag-icon stag-icon-stagon mr-2 d-lg-inline d-none" style="font-size: 15px;"></span>
+                  <span>StagONS</span>
+                </a>
+              </li>
+              <li>
+                <a id="docs" data-linked="documentation-menu">Documentation</a>
+              </li>
+              <li>
+                <a href="/contribute.html">
+                  <span class="stag-icon stag-icon-heart d-lg-inline d-none"></span>
+                  <span class="d-lg-none d-inline">Contribute</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-cta" href="https://github.com/StagPHP/framework/archive/master.zip" download><i class="stag-icon stag-icon-download"></i> Download</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-    </header>
-    <!-- END Site header -->
+      <!-- Dropdown Documentation Menu -->
+      <div id="documentation-menu" class="container-fluid mega-menu d-lg-block d-none" style="background-image: url(/assets/media/menu-bg-textured.jpg);">
+        <div class="row py-5">
+          <div class="col-4">
+
+          </div>
+          <div class="col-4">
+            <h4 class="mb-4">Explore Documentation</h4>
+            <a class="d-block mt-3 mb-0" href="/docs/">
+              <span class="stag-icon stag-icon-right"></span> All Documentations
+            </a>
+            <a class="d-block mt-3 mb-0" href="/docs/getting-started.html">
+              <span class="stag-icon stag-icon-right"></span> Getting Started
+            </a>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> Beginners guide <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> Basic Examples <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+          </div>
+          <div class="col-4">
+            <h4 class="mb-4">Explore Reference</h4>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> Core Architecture <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+            <div class="p-4"></div>
+            <h4 class="mb-4">Development</h4>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> StagPHP Development <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> StagONS Development <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Navigation -->
+    <nav class="side-nav-base">
+      <div class="close-drawer">
+        <div class="drawer px-3">
+          <span class="stag-icon stag-icon-arrow-back mr-2"></span>
+          <span><strong>CLOSE</strong></span>
+        </div>
+      </div>
+      <ul class="nav-menu"></ul>
+    </nav>
+  </header>
 
 
-    <!-- Main container -->
-    <main>
+  <!-- Body Container -->
+  <div class="body-container">
+    <!-- Header Content -->
+    <div style="background-image: url(/assets/media/docs-bg.jpg); background-size: cover; background-position: center top;">
+      <div class="py-5" style="height: 350px;">
+      </div>
+    </div>
 
-        <!-- Section - Features -->
-        <section id="sec-features" class="no-border-bottom bg-gray-lighter">
-            <div class="container">
+    <!-- Body Content -->
+    <div class="body-content py-5">
 
-                <header class="section-header text-left">
-                    <h2>Getting Started</h2>
-                </header>
+      <div class="container content-section py-5">
+        <div class="section-header py-5">
+          <h1><strong>Getting Started Guide for StagPHP</strong></h1>
+        </div>
+        <div class="row grid-list">
+          <div class="col-12 pb-4 mb-4">
+            <h4 class="mb-3"><a href="#">Installation of StagPHP</a></h4>
+            <p>Tutorial is almost ready. Will be available on next update. Thank you for your patience.</p>
+            <a class="mb-3" href="#">Continue reading...</a>
+          </div>
+          <div class="col-12 pb-4 mb-4">
+            <h4 class="mb-3"><a href="#">Setting up Ubuntu Server for StagPHP</a></h4>
+            <p>Tutorial is almost ready. Will be available on next update. Thank you for your patience.</p>
+            <a class="mb-3" href="#">Continue reading...</a>
+          </div>
+          <div class="col-12 pb-4 mb-4">
+            <h4 class="mb-3"><a href="#">SagPHP Hello World! Application</a></h4>
+            <p>Tutorial is almost ready. Will be available on next update. Thank you for your patience.</p>
+            <a class="mb-3" href="#">Continue reading...</a>
+          </div>
+        </div>
+      </div>
 
-                <ul class="list-view">
-                    <li>
-                        <h5><a href="#">Installation of StagPHP</a></h5>
-                        <p class="meta-data">February 10, 2020 | 3 mins | Beginner</p>
-                        <p>Tutorial is almost ready. Will be available on next update. Thank you for your patience.</p>
-                        <a class="read-more" href="#"><strong>Continue reading...</strong></a>
-                    </li>
-
-                    <li>
-                        <h5><a href="#">Setting up Ubuntu Server for StagPHP</a></h5>
-                        <p class="meta-data">August 26, 2015 | 5 mins | Beginner</p>
-                        <p>Tutorial is almost ready. Will be available on next update. Thank you for your patience.</p>
-                        <a class="read-more" href="#"><strong>Continue reading...</strong></a>
-                    </li>
-
-                    <li>
-                        <h5><a href="#">SagPHP Hello World! Application</a></h5>
-                        <p class="meta-data">August 26, 2015 | 5 mins | Beginner</p>
-                        <p>Tutorial is almost ready. Will be available on next update. Thank you for your patience.</p>
-                        <a class="read-more" href="#"><strong>Continue reading...</strong></a>
-                    </li>
-
-                    <li>
-                        <h5><a href="#">Create Business Website in 15 min using StagPHP</a></h5>
-                        <p class="meta-data">Not Released | 15 mins | Intermediate</p>
-                        <p>Tutorial is almost ready. Will be available on next update. Thank you for your patience.</p>
-                        <a class="read-more" href="#"><strong>Continue reading...</strong></a>
-                    </li>
-                </ul>
-
-            </div>
-        </section>
-        <!-- END Section - Features -->
-
-    </main>
-    <!-- END Main container -->
+    </div>
 
     <!-- Site footer -->
-    <footer class="site-footer" data-load-template="footer"></footer>
-    <!-- END Site footer -->
+    <footer style="background: #272c31;" data-load-template="footer"></footer>
+  </div>
 
-    <!-- Scripts -->
-    <script src="/assets/js/app.min.js"></script>
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
-    <script src="/assets/js/main.min.js"></script>
-    <!-- END Scripts -->
 
+  <!-- Back to top -->
+  <div class="back-to-top">
+    <span class="stag-icon stag-icon-up"></span>
+  </div>
+  <!-- Scripts -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/popper.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/sweet-alert-2.min.js"></script>
+  <script src="/assets/js/js.cookie.min.js"></script>
+  <script src="/assets/js/theme.js"></script>
 </body>
-
-</html>

@@ -1,0 +1,15 @@
+<div class="notify">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 py-3 p-relative">
+
+        <!-- Content -->
+        <p class="m-0 text-white">StagPHP Framework is under development. You can download the beta version only for testing purposes. It is scheduled to launch officially in April 2020. <a href="#">Read More...</a></p>
+
+        <!-- Close Button -->
+        <span class="stag-icon stag-icon-close text-white" onClick="closeNotification();"></span>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+body.notification-active{
+  .notification {
+    position: relative;
+    background-color: #444;
+    // height: 50px;
+  }
+  
+  .notification .notify {
+    position: fixed;
+    background-color: #333;
+    width: 100%;
+    // height: 50px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    p{
+      padding-right: 45px;
+      text-align: justify;
+    }
+  }
+  
+  .stag-icon-close{
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 56px;
+    width: 60px;
+    text-align: center;
+    line-height: 56px;
+    font-size: 26px;
+    cursor: pointer;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .large-title {
+    font-size: 50px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .large-title {
+    font-size: 60px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .large-title {
+    font-size: 70px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .large-title {
+    font-size: 80px;
+  }
+}

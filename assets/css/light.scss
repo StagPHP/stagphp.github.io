@@ -1,0 +1,174 @@
+$base_color: #f9f9f9;
+$base_color_dark: #f4f4f4;
+$border: #e7e7e7;
+
+body.light-theme {
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #555;
+  }
+
+  p {
+    color: #666;
+  }
+
+  .text-white{
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #eee;
+    }
+  
+    p {
+      color: #eee;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .body-content {
+    background-color: $base_color;
+  }
+
+  .top-nav-bar,
+  .mega-menu {
+    background: $base_color;
+  }
+
+  ul.top-navigation,
+  ul.nav-menu {
+    a {
+      color: #555;
+      font-weight: bold;
+    }
+
+    .nav-cta {
+      background-color: #4e5965;
+      color: #fff !important;
+    }
+  }
+
+  .side-nav-base {
+    background-color: $base_color;
+  }
+
+  .section-header h1::after,
+  .section-header h2::after,
+  .section-header h3::after,
+  .large-title::after {
+    background: #555555;
+  }
+
+  .section-header.text-white  {
+    h1::after, h2::after, h3::after{
+      background: #fff;
+    }
+  }
+
+  .large-title.text-white::after {
+    background: #fff;
+  }
+
+  .top-nav-bar,
+  .full-screen-header,
+  .body-container {
+    transition: all 0.2s;
+    -webkit-filter: contrast(1) brightness(1);
+    filter: contrast(1) brightness(1);
+  }
+
+  .grid-list{
+    a:not(.btn){
+      color: #555;
+      font-weight: bold;
+    }
+    a:hover,
+    a:focus,
+    a:active{
+      color: #0BB0C4;
+    }
+  }
+
+
+  #transparent-bar {
+    background: transparent;
+    transition: all 0.3s;
+
+    ul.top-navigation {
+      a {
+        color: #fff;
+      }
+    }
+
+    .menu-open {
+      color: #fff;
+    }
+  }
+
+  #transparent-bar.page-scrolled,
+  #transparent-bar.opaque {
+    background: $base_color;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+
+    ul.top-navigation {
+      li.active {
+        box-shadow: 0 -8px 0 0 #0BB0C4 inset;
+      }
+
+      a {
+        color: #555;
+      }
+    }
+
+    .menu-open {
+      color: #555;
+    }
+  }
+
+  .mega-menu {
+    box-shadow: 0 1px 0 0 #ddd inset, 0 5px 5px rgba(0,0,0,0.15);
+  }
+
+  .footer,
+  footer {
+
+    h3,
+    h4,
+    h5,
+    p,
+    a:not(.btn) {
+      color: #c7c7c7;
+      transition: all 0.2s;
+    }
+
+    a:not(.btn):hover,
+    a:not(.btn):active,
+    a:not(.btn):focus {
+      color: #ffffff;
+      transition: all 0.2s;
+    }
+
+    a.disabled{
+      color: rgba(255,255,255,0.4) !important;
+      pointer-events: none;
+    }
+  }
+}
+
+body.light-theme.faded {
+
+  .top-nav-bar,
+  .full-screen-header,
+  .body-container {
+    transition: all 0.2s;
+    -webkit-filter: contrast(0.5) brightness(1.2);
+    filter: contrast(0.5) brightness(1.2);
+  }
+}

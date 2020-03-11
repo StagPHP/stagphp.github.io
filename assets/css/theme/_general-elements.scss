@@ -1,0 +1,96 @@
+.card {
+  border: none;
+  border-radius: 0;
+}
+
+.icon-box {
+  text-align: center;
+
+  .large-icon {
+    .stag-icon {
+      font-size: 160px;
+    }
+  }
+}
+
+.small-icon-box {
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px 1px 3px rgba(0, 0, 0, 0.1);
+
+  .large-icon {
+    .stag-icon {
+      font-size: 90px;
+    }
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #343A41;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.back-to-top.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+table.category-card {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  border-radius: 4px;
+
+  .large-icon{
+    font-size: 80px;
+    line-height: 50px;
+    margin: 0;
+  }
+
+  h4 {
+    line-height: 50px;
+  }
+
+  a,
+  p {
+    color: #fff !important;
+  }
+
+  p a {
+    font-weight: normal !important;
+    text-transform: uppercase;
+  }
+}
+
+.primary-gradient{
+  background: rgb(0, 172, 193);
+  background: linear-gradient(135deg, #00acc1 50%, #008d9e 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00acc1", endColorstr="#008d9e", GradientType=1);
+}
+
+.gold-gradient{
+  background: rgb(0, 172, 193);
+  background: linear-gradient(135deg, #DAA044 50%, #b98736 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00acc1", endColorstr="#008d9e", GradientType=1);
+}
+
+.dark-gradient{
+  background: rgb(0, 172, 193);
+  background: linear-gradient(135deg, #4E5965 50%, #373f47 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00acc1", endColorstr="#008d9e", GradientType=1);
+}

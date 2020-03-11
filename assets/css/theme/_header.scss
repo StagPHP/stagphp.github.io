@@ -1,0 +1,15 @@
+header {
+  position: relative;
+
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+.primary-header {
+  background-position: center top;
+  background-size: cover;
+}

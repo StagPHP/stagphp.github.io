@@ -1,0 +1,139 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.body-container {
+  width: 100%;
+  height: 100%;
+
+  .body-content {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.scrollbar-thumb {
+  border-radius: 0 !important;
+}
+
+.row.contained {
+  max-width: 950px;
+}
+
+.centered-layout-container {
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  >div {
+    display: table-cell;
+    vertical-align: middle;
+
+    >div {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+
+.large-title {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1;
+
+  span:nth-child(2) {
+    font-size: 144%;
+  }
+
+  span:nth-child(4) {
+    font-size: 110%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .large-title {
+    font-size: 50px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .large-title {
+    font-size: 60px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .large-title {
+    font-size: 70px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .large-title {
+    font-size: 80px;
+  }
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.section-header h1::after,
+.section-header h2::after,
+.section-header h3::after,
+.large-title::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 4px;
+  margin: 14px 0;
+  background: #555555;
+}
+
+.section-header.text-center h1::after,
+.section-header.text-center h2::after,
+.section-header.text-center h3::after,
+.large-title.text-center::after {
+  margin: 14px auto;
+}
+
+.large-title::after {
+  width: 170px;
+  background: #fff;
+  margin: 30px 0;
+}
+
+.row.grid-list:not(.grid-blocks) {
+  >div {
+    box-shadow: 0 1px 0 0 #ccc;
+  }
+  >div:last-child {
+    box-shadow: none;
+  }
+}
+
+.swal2-close{
+  outline: none !important;
+}
+
+.big-first-letter::first-letter {
+  font-size: 40px;
+  float: left;
+  padding: 5px 10px 0;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+html.swal2-shown,
+body.swal2-shown {
+  overflow: unset !important;
+}

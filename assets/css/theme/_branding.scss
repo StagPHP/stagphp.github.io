@@ -1,0 +1,59 @@
+.logo {
+    display: none;
+}
+
+#transparent-bar {
+    .logo img {
+        height: 100px;
+        padding: 15px 0;
+        transition: all 0.3s;
+    }
+
+    .light-version {
+        display: block;
+    }
+}
+
+#transparent-bar.page-scrolled {
+    .logo img {
+        height: 80px;
+        transition: all 0.3s;
+    }
+
+    .light-version {
+        display: none;
+    }
+    .dark-version {
+        display: block;
+    }
+}
+
+#transparent-bar.opaque {
+    .light-version {
+        display: none;
+    }
+    .dark-version {
+        display: block;
+    }
+}
+
+.explore-stag{
+    position: relative;
+    float: left;
+    text-decoration: none;
+    line-height: 30px;
+
+    >span{
+        float: right;
+        line-height: 30px;
+    }
+    >span:first-child{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 30px;
+        margin-left: 14px;
+    }
+}

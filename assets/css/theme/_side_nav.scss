@@ -1,0 +1,43 @@
+.side-nav-base{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in;
+    z-index: 999;
+
+    .nav-menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            float: left;
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            line-height: 60px;
+            padding: 0 15px;
+        }
+
+        li:last-child{
+            padding-top: 20px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        .nav-cta{
+            padding: 10px;
+            border-radius: 3px;
+        }
+    }
+}
+
+.side-nav-base.active {
+    transform: translateX(0);
+    transition: transform 0.2s ease-out;
+}
