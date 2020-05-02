@@ -122,11 +122,10 @@ function stagAlertNotification(){
 
   if(undefined == cookieValue){
     Swal.fire({
-      title: '<span class="mb-3">Under Development</span>',
-      icon: 'info',
-      html: '<p class="text-justify">Currently, StagPHP Framework and its official website are under development. StagPHP is scheduled to launch officially in April 2020. Please follow us on Twitter and join our Discord channel to stay up to date.</p>' + '<p class="text-center py-3">' +
-        '<a target="_blank" href="#twitter" class="btn btn-secondary mr-3"><span class="stag-icon stag-icon-twitter"></span> Twitter</a>' +
-        '<a target="_blank" href="#discord" class="btn btn-secondary"><span class="stag-icon stag-icon-discord"></span> Discord</a>' + '</p>',
+      title: '<span class="py-3">Your Contribution Required!</span>',
+      html: '<p class="text-justify">Currently, StagPHP Framework is in the beta version. Join us on discord and be a part of our development team. Participate in beta testing and hare your feedback with our community.</p>' + '<p class="text-center py-3">' +
+        '<a target="_blank" href="https://twitter.com/StagPHP" class="btn btn-secondary mr-3"><span class="stag-icon stag-icon-twitter"></span> Twitter</a>' +
+        '<a target="_blank" href="https://discord.gg/nhtwy4C" class="btn btn-secondary"><span class="stag-icon stag-icon-discord"></span> Discord</a>' + '</p>',
       showCloseButton: true,
       showConfirmButton: false,
       scrollbarPadding: false,

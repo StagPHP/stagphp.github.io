@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no">
+
+  <!-- Primary Meta Tags -->
+  <title>StagPHP Framework Architecture</title>
+  <meta name="title" content="StagPHP Framework Architecture">
+  <meta name="description" content="Below listed flow chart elaborates how StagPHP processes every single request. It starts from startup.php and after processing the request, it routes the processed and valid request to your application....">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stagphp.io/contribute.html">
+  <meta property="og:title" content="StagPHP Framework Architecture">
+  <meta property="og:description" content="Below listed flow chart elaborates how StagPHP processes every single request. It starts from startup.php and after processing the request, it routes the processed and valid request to your application....">
+  <meta property="og:image" content="https://stagphp.io/assets/media/social.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://stagphp.io/contribute.html">
+  <meta property="twitter:title" content="StagPHP Framework Architecture">
+  <meta property="twitter:description" content="Below listed flow chart elaborates how StagPHP processes every single request. It starts from startup.php and after processing the request, it routes the processed and valid request to your application....">
+  <meta property="twitter:image" content="https://stagphp.io/assets/media/social.jpg">
+
+  <script>
+    if (top !== self) top.location.replace(self.location.href);
+  </script>
+
+  <!-- Bootstrap Styles -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+  <!-- Theme Styles -->
+  <link rel="stylesheet" href="/assets/css/theme.min.css">
+
+  <!-- Theme Color Styles -->
+  <link rel="stylesheet" href="/assets/css/light.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" id="google-fonts" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700" type="text/css" media="none" onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" id="google-fonts" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700" type="text/css" media="all" />
+  </noscript>
+
+  <!-- StagPHP Font Icons -->
+  <link rel="stylesheet" id="stag-icons" href="/assets/stag-icons/style.css" type="text/css" media="none" onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" id="stag-icons" href="/assets/stag-icons/style.css" type="text/css" media="all" />
+  </noscript>
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-128.png" sizes="128x128" />
+
+  <meta name="application-name" content="StagPHP" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="/assets/favicon/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/assets/favicon/mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/assets/favicon/mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/assets/favicon/mstile-310x310.png">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N6KTSKL');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body class="light-theme notification-active">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6KTSKL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Notification -->
+  <div class="notification" style="display: none;" data-load-template="notify"></div>
+
+  <!-- Header -->
+  <header>
+    <!-- Top Navigation Bar -->
+    <div id="transparent-bar" class="top-nav-bar">
+      <!-- Top Bar -->
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Logo -->
+          <div class="col-lg-2 col-6">
+            <div class="branding text-lg-left float-lg-left float-right">
+              <a class="logo dark-version" href="/index.html">
+                <img src="/assets/media/logo/stagphp-logo-dark.png" alt="logo">
+              </a>
+              <a class="logo light-version" href="/index.html">
+                <img src="/assets/media/logo/stagphp-logo-light.png" alt="logo">
+              </a>
+            </div>
+          </div>
+
+          <!-- Side menu drawer -->
+          <div class="col-6 d-lg-none d-block order-first">
+            <div class="drawer menu-open float-left pr-2">
+              <span class="stag-icon stag-icon-drawer mr-2"></span>
+              <span><strong>MENU</strong></span>
+            </div>
+          </div>
+
+          <!-- menu -->
+          <div class="col-lg-10 col-12 d-lg-block d-none">
+            <ul class="top-navigation">
+              <li>
+                <a class="disabled">
+                  <span class="stag-icon stag-icon-stagon mr-2 d-lg-inline d-none" style="font-size: 15px;"></span>
+                  <span>StagONS</span>
+                </a>
+              </li>
+              <li>
+                <a id="docs" data-linked="documentation-menu">Documentation</a>
+              </li>
+              <li>
+                <a href="/contribute.html">
+                  <span class="stag-icon stag-icon-heart d-lg-inline d-none"></span>
+                  <span class="d-lg-none d-inline">Contribute</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-cta" href="https://github.com/StagPHP/framework/archive/master.zip" download><i class="stag-icon stag-icon-download"></i> Download</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dropdown Documentation Menu -->
+      <div id="documentation-menu" class="container-fluid mega-menu d-lg-block d-none" style="background-image: url(/assets/media/menu-bg-textured.jpg);">
+        <div class="row py-5">
+          <div class="col-4">
+
+          </div>
+          <div class="col-4">
+            <h4 class="mb-4">Explore Documentation</h4>
+            <a class="d-block mt-3 mb-0" href="/docs/">
+              <span class="stag-icon stag-icon-right"></span> All Documentations
+            </a>
+            <a class="d-block mt-3 mb-0" href="/docs/getting-started.html">
+              <span class="stag-icon stag-icon-right"></span> Getting Started
+            </a>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> Beginners guide <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> Basic Examples <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+          </div>
+          <div class="col-4">
+            <h4 class="mb-4">Explore Reference</h4>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> Core Architecture <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+            <div class="p-4"></div>
+            <h4 class="mb-4">Development</h4>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> StagPHP Development <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+            <a class="d-block mt-3 mb-0 text-muted">
+              <span class="stag-icon stag-icon-right"></span> StagONS Development <sup><span class="badge badge-secondary">Under Development</span></sup>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Navigation -->
+    <nav class="side-nav-base">
+      <div class="close-drawer">
+        <div class="drawer px-3">
+          <span class="stag-icon stag-icon-arrow-back mr-2"></span>
+          <span><strong>CLOSE</strong></span>
+        </div>
+      </div>
+      <ul class="nav-menu"></ul>
+    </nav>
+  </header>
+
+
+  <!-- Body Container -->
+  <div class="body-container">
+    <!-- Header Content -->
+    <div style="background-image: url(/assets/media/home-bg.jpg); background-size: cover; background-position: center top;">
+      <div class="py-5" style="height: 350px;">
+      </div>
+    </div>
+
+    <!-- Body Content -->
+    <div class="body-content">
+
+      <div class="container content-section py-5">
+        <div class="row py-5">
+          <div class="col-12">
+            <div class="section-header text-center mb-5">
+              <h1>StagPHP Architecture</h1>
+              <p>StagPHP works on MVC architecture</p>
+            </div>
+            <div class="row icon-box">
+              <div class="col-12 align-self-center">
+                <img class="img-fluid mb-5" src="/assets/media/main/architecture.png" />
+                <p class="text-justify">All the requests received are processed, filtered, and secured by the StagPHP. Then the request is passed to your application as per the routing logic defined by you in your application. Your application will then process the request using the controllers you used. Controllers control your application model and views. You have the complete freedom to choose any controllers from the list of available core controllers. Unlike other frameworks, StagPHP loads only essential controllers to keep your application lightweight. You can also use custom controllers (StagONS) to extend the built-in functionality of StagPHP. For security reasons, only use trusted StagONS listed in the StagPHP StagONS archive, until and unless you are sure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container content-section pt-3 pb-5">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header text-left">
+              <h3>Request Processing Flow Chat</h3>
+            </div>
+            <p class="text-justify">Below listed flow chart elaborates how StagPHP processes every single request. It starts from startup.php and after processing the request, it routes the processed and valid request to your application. Rest handled by your application.</p>
+            <img class="img-fluid my-5" src="/assets/media/main/request-processing.png" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Site footer -->
+    <footer style="background: #272c31;" data-load-template="footer"></footer>
+  </div>
+
+
+  <!-- Back to top -->
+  <div class="back-to-top">
+    <span class="stag-icon stag-icon-up"></span>
+  </div>
+  <!-- Scripts -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/popper.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/sweet-alert-2.min.js"></script>
+  <script src="/assets/js/js.cookie.min.js"></script>
+  <script src="/assets/js/theme.js"></script>
+</body>
