@@ -18,7 +18,7 @@
       <div class="col-lg-3 col-md-6 col-12 mb-0">
         <h4 class="mb-4">Explore StagPHP</h4>
         <div>
-          <a class="disabled">
+          <a href="/stagons/">
             <span class="stag-icon stag-icon-right"></span>
             <span>StagONS Archive</span>
           </a>
