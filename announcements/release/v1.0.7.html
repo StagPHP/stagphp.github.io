@@ -4,25 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no">
-  <link rel="canonical" href="https://stagphp.io/announcements/" />
 
   <!-- Primary Meta Tags -->
-  <title>StagPHP Community Announcements</title>
-  <meta name="title" content="StagPHP Community Announcements">
-  <meta name="description" content="Go through community announcements to get the details of the upcoming release of the StagPHP framework. Learn what our community is building and fixing.">
+  <title>Details of StagPHP framework next release v1.0.5</title>
+  <meta name="title" content="Details of StagPHP framework next release v1.0.5">
+  <meta name="description" content="In our next release, our community members have planned to release StagONS functionality. We are doing several verbose testing right now. The official release date will be announced soon.">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://stagphp.io/announcements/">
-  <meta property="og:title" content="StagPHP Community Announcements">
-  <meta property="og:description" content="Go through community announcements to get the details of the upcoming release of the StagPHP framework. Learn what our community is building and fixing.">
+  <meta property="og:url" content="https://stagphp.io/announcements/release/v1.0.7.html">
+  <meta property="og:title" content="Details of StagPHP framework next release v1.0.7">
+  <meta property="og:description" content="In our next release, our community members have planned to release StagONS functionality. We are doing several verbose testing right now. The official release date will be announced soon.">
   <meta property="og:image" content="https://stagphp.io/assets/media/social.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://stagphp.io/announcements/">
-  <meta property="twitter:title" content="StagPHP Community Announcements">
-  <meta property="twitter:description" content="Go through community announcements to get the details of the upcoming release of the StagPHP framework. Learn what our community is building and fixing.">
+  <meta property="twitter:url" content="https://stagphp.io/announcements/release/v1.0.6.html">
+  <meta property="twitter:title" content="Details of StagPHP framework next release v1.0.5">
+  <meta property="twitter:description" content="In our next release, our community members have planned to release StagONS functionality. We are doing several verbose testing right now. The official release date will be announced soon.">
   <meta property="twitter:image" content="https://stagphp.io/assets/media/social.jpg">
 
   <script>
@@ -132,7 +131,7 @@
           <div class="col-lg-10 col-12 d-lg-block d-none">
             <ul class="top-navigation">
               <li>
-                <a href="/stagons/">
+                <a class="disabled">
                   <span class="stag-icon stag-icon-stagon mr-2 d-lg-inline d-none" style="font-size: 15px;"></span>
                   <span>StagONS</span>
                 </a>
@@ -218,51 +217,63 @@
     <div class="body-content py-5">
 
       <div class="container content-section py-5">
-        <div class="section-header py-5">
-          <h1>Community <strong>Announcements</strong></h1>
-        </div>
         <div class="row grid-list">
-
-          <div class="col-12 pb-4 mb-4">
-            <h4 class="mb-3"><a href="#">Working on next release v1.0.7</a></h4>
-            <p class="mb-1"><small class="text-muted"> DATE 5<sup>th</sup> May 2020</small></p>
-            <p>StagONS integration almost completed. We are planing tp launch this release after several verbose testing. Currently working on StagONS integration and discovery...</p>
-            <a class="mb-3" href="/announcements/release/v1.0.7.html">Continue reading...</a>
+          <div class="col-12">
+            <div class="section-header text-left">
+              <h2>Upcoming release details of StagPHP framework - v1.0.7</h2>
+            </div>
+            <p style="margin-bottom: 30px;">Our developers and community members are working, to bring a more advanced version of StagPHP. StagPHP core structure will be recreated and the booting sequence will be updated. We will be narrowing down the build versions of StagPHP to two major versions from the previous three versions:<br></p>
+            <div>
+              <p>Previous Builds:</p>
+              <ul style="color: #666;">
+                <li>Hybrid Build (Default)</li>
+                <li>MySQL Build</li>
+                <li>JDB / NO RDBMS Build</li>
+              </ul>
+            </div>
+            <div>
+              <p>To two major builds:</p>
+              <ul style="color: #666;">
+                <li>Standard Build (Default)</li>
+                <li>Lite Build (JDB / NO RDBMS version)</li>
+              </ul>
+            </div>
+            <p  style="margin-bottom: 30px;">This release will affect all previous releases. There will be little or no impact on your existing application if you are using your custom DB controllers, instead of the default one. As our community members said several times before “Don’t use built-in DB controller till StagPHP is in beta phase.”
+            </p>
+            
+            <div>
+              <p>This is what coming in v1.0.7</p>
+                <ol style="color: #666;">
+                  <li>New build versions</li>
+                  <li>Recreating StagPHP core structure and updating booting sequence</li>
+                  <li>Application deployment optimized</li>
+                  <li>Application export as zip functionality</li>
+                  <li>StagONS Deletion functionality</li>
+                  <li>StagONS export as zip functionality</li>
+                  <li>New look UI and UX – fixed most of the bugs, changed the color contrast, changed the UI Scale (somewhat close to GitHub UI scale)</li>
+                  <li>Superuser profile, security settings, dashboard setting</li>
+              </ol>
+            </div>
+            <p style="margin-bottom: 30px; margin-top: 10px;">The next update will be another beta release. The official release date will be announced soon. Stay connected in discord to know more. Consider contributing to StagPHP. Your contribution can help our community to speed up the development process.</p>
           </div>
-
-          <div class="col-12 pb-4 mb-4">
-            <h4 class="mb-3"><a href="#">Working on next release v1.0.6</a></h4>
-            <p class="mb-1"><small class="text-muted"> DATE 5<sup>th</sup> May 2020</small></p>
-            <p>StagONS integration almost completed. We are planing tp launch this release after several verbose testing. Currently working on StagONS integration and discovery...</p>
-            <a class="mb-3" href="/announcements/release/v1.0.6.html">Continue reading...</a>
-          </div>
-
-          <div class="col-12 pb-4 mb-4">
-            <h4 class="mb-3"><a href="#">Working on next release v1.0.5</a></h4>
-            <p class="mb-1"><small class="text-muted"> DATE 11<sup>th</sup> March 2020</small></p>
-            <p>StagONS integration almost completed. We are planing tp launch this release after several verbose testing. Currently working on StagONS integration and discovery...</p>
-            <a class="mb-3" href="/announcements/release/v1.0.5.html">Continue reading...</a>
-          </div>
-
         </div>
+
       </div>
 
+      <!-- Site footer -->
+      <footer style="background: #272c31;" data-load-template="footer"></footer>
     </div>
 
-    <!-- Site footer -->
-    <footer style="background: #272c31;" data-load-template="footer"></footer>
-  </div>
 
-
-  <!-- Back to top -->
-  <div class="back-to-top">
-    <span class="stag-icon stag-icon-up"></span>
-  </div>
-  <!-- Scripts -->
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/popper.min.js"></script>
-  <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/sweet-alert-2.min.js"></script>
-  <script src="/assets/js/js.cookie.min.js"></script>
-  <script src="/assets/js/theme.js"></script>
+    <!-- Back to top -->
+    <div class="back-to-top">
+      <span class="stag-icon stag-icon-up"></span>
+    </div>
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/sweet-alert-2.min.js"></script>
+    <script src="/assets/js/js.cookie.min.js"></script>
+    <script src="/assets/js/theme.js"></script>
 </body>
